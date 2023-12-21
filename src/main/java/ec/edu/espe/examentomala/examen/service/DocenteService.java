@@ -2,7 +2,6 @@ package ec.edu.espe.examentomala.examen.service;
 
 import ec.edu.espe.examentomala.examen.dao.DocenteRepository;
 import ec.edu.espe.examentomala.examen.domain.Docente;
-import ec.edu.espe.examentomala.examen.domain.Especialidad;
 import ec.edu.espe.examentomala.examen.service.exception.CreacionException;
 import jakarta.transaction.Transactional;
 
@@ -19,7 +18,7 @@ public class DocenteService {
         try {
             return this.docenteRepository.save(docente);
         } catch (Exception e) {
-            throw new CreacionException("Ocurrio un error al crear el docente: " + docente.toString(), e);
+            throw new CreacionException("Ocurrio un error al crear el docente: " + docente.toString(),  e);
         }
     }
 
