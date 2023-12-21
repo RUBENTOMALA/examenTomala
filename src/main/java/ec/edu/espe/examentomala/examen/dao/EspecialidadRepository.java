@@ -6,4 +6,6 @@ import ec.edu.espe.examentomala.examen.domain.Especialidad;
 
 public interface EspecialidadRepository extends CrudRepository<Especialidad, String> {
 
+    Iterable<Especialidad> findByNombreLike(String nombre);
+
 }
